@@ -12,7 +12,6 @@ exports.Route = Route;
 exports.SessionRoute = SessionRoute;
 exports.generateRoutes = generateRoutes;
 exports.generateSecuredRoutes = generateSecuredRoutes;
-exports.flattenRoutes = flattenRoutes;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
@@ -68,6 +67,5 @@ function generateSecuredRoutes(routes) {
   return generateRoutes(routes, true);
 }
 
-function flattenRoutes(xs) {
-  return (0, _lodashFlattendeep2['default'])(xs);
-}
+var flattenRoutes = _lodashFlattendeep2['default'];
+exports.flattenRoutes = flattenRoutes;
