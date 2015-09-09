@@ -4,7 +4,8 @@
   "description": "Utils for reducing boilerplate when configuring Hapi.js routes",
   "main": "index.js",
   "scripts": {
-    "test": "lab -v --leaks --assert code --coverage --sourcemaps --transform .transform.lab.js"
+    "test": "lab -v --leaks --assert code --coverage --sourcemaps --transform .transform.lab.js",
+    "build": "babel src/index.js -o index.js"
   },
   "repository": {
     "type": "git",
