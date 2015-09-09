@@ -1,6 +1,6 @@
 {
   "name": "hapi-route-utils",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Utils for reducing boilerplate when configuring Hapi.js routes",
   "main": "index.js",
   "scripts": {
