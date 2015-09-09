@@ -15,7 +15,7 @@ export function Route(method, path, config) {
   return [{
     method: method,
     path: path,
-    config: config,
+    [typeof config === 'function' ? 'handler' : 'config']: config,
   }];
 
 }

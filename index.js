@@ -15,6 +15,8 @@ exports.generateSecuredRoutes = generateSecuredRoutes;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 var _lodashFlattendeep = require('lodash.flattendeep');
 
 var _lodashFlattendeep2 = _interopRequireDefault(_lodashFlattendeep);
@@ -36,11 +38,10 @@ function Route(method, path, config) {
     });
   }
 
-  return [{
+  return [_defineProperty({
     method: method,
-    path: path,
-    config: config
-  }];
+    path: path
+  }, typeof config === 'function' ? 'handler' : 'config', config)];
 }
 
 function SessionRoute(method, path, config) {

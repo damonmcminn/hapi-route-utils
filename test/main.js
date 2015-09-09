@@ -29,6 +29,20 @@ describe('Route', _ => {
 
   });
 
+  it('should return a route object with a handler property if supplied a function', done => {
+
+    let [fn, obj] = utils.generateRoutes([
+      ['GET', '/', function() {}],
+      ['GET', '/', {}]
+    ]);
+
+    expect(fn.handler).to.exist();
+    expect(obj.config).to.exist();
+
+    done();
+
+  });
+
 });
 
 describe('SessionRoute', _ => {
