@@ -10,7 +10,7 @@ let {
 } = lab;
 let { expect } = Code;
 
-import * as utils from '../index';
+import * as utils from '../src/index';
 
 describe('Route', _ => {
 

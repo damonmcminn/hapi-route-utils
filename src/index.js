@@ -41,6 +41,4 @@ export function generateSecuredRoutes(routes) {
   return generateRoutes(routes, true);
 }
 
-export function flattenRoutes(xs) {
-  return flattenDeep(xs);
-}
+export const flattenRoutes = flattenDeep;
