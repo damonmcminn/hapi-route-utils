@@ -1,0 +1,28 @@
+{
+  "name": "hapi-route-utils",
+  "version": "0.0.1",
+  "description": "Utils for reducing boilerplate when configuring Hapi.js routes",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -v --leaks --assert code --coverage --sourcemaps --transform .transform.lab.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/damonmcminn/hapi-route-utils.git"
+  },
+  "author": "Damon McMinn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/damonmcminn/hapi-route-utils/issues"
+  },
+  "homepage": "https://github.com/damonmcminn/hapi-route-utils#readme",
+  "dependencies": {
+    "lodash.flattendeep": "^3.0.2"
+  },
+  "devDependencies": {
+    "babel-core": "^5.8.23",
+    "babel-runtime": "^5.8.20",
+    "code": "^1.5.0",
+    "lab": "^5.16.0"
+  }
+}
