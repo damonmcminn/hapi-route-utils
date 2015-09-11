@@ -30,10 +30,9 @@ export function generateRoutes(routes, secured) {
 
   let routeGenerator = secured ? SessionRoute : Route;
 
-  return routes.map(routeTuple => {
-    let [route] = routeGenerator.apply(null, routeTuple);
-    return route;
-  });
+  return flattenDeep(routes.map(routeTuple => {
+    return routeGenerator.apply(null, routeTuple);
+  }));
 
 }
 

@@ -29,6 +29,16 @@ describe('Route', _ => {
 
   });
 
+  it('should accept a tuple in form [["GET", "POST"], "/", config]', done => {
+
+    let [GET, POST] = utils.Route(['GET', 'POST'], '/', {get: 'success', post: 'success'});
+
+    expect(GET.config).to.be.a.string('success');
+    expect(POST.config).to.be.a.string('success');
+    done();
+
+  });
+
   it('should return a route object with a handler property if supplied a function', done => {
 
     let [fn, obj] = utils.generateRoutes([
@@ -66,6 +76,17 @@ describe('GenerateRoutes', _ => {
     let generated = utils.generateRoutes([routeTuple]);
 
     expect(generated[0].method).to.be.a.string('method');
+    done();
+
+  });
+
+  it('should accept tuples in form [["GET", "POST"], "/", config]', done => {
+
+    let [_, POST] = utils.generateRoutes([
+      [['GET', 'POST'], '/', {get: 'success', post: 'success'}]
+    ]);
+
+    expect(POST.config).to.be.a.string('success');
     done();
 
   });
