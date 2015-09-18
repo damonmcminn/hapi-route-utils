@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/damonmcminn/hapi-route-utils#readme",
   "dependencies": {
+    "babel": "^5.8.23",
     "lodash.flattendeep": "^3.0.2"
   },
   "devDependencies": {
