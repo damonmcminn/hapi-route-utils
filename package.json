@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "lab -v --leaks --assert code --coverage --sourcemaps --transform .transform.lab.js",
-    "build": "babel index.js -o index.js",
+    "build": "babel src/index.js -o index.js",
     "postinstall": "npm run build"
   },
   "repository": {
