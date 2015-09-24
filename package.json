@@ -1,12 +1,12 @@
 {
-  "name": "hapi-route-utils",
+  "name": "@damonmcminn/hapi-route-utils",
   "version": "0.3.0",
   "description": "Utils for reducing boilerplate when configuring Hapi.js routes",
   "main": "index.js",
   "scripts": {
     "test": "lab -v --leaks --assert code --coverage --sourcemaps --transform .transform.lab.js",
     "build": "babel src/index.js -o index.js",
-    "postinstall": "npm run build"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
